@@ -1,0 +1,19 @@
+.input {
+  color: var(--white);
+  font-size: 13px;
+  background-color: transparent;
+  height: 100%;
+  border: none;
+}
+
+.input-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  height: 30px;
+}
+
+.input-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}

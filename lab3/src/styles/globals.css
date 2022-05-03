@@ -11,7 +11,6 @@ body {
 .root {
   height: 100vh;
   display: flex;
-  
   flex-direction: column;
 }
 
@@ -99,4 +98,13 @@ a {
 
 .mr-2 {
   margin-right: 8px;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.my-4 {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
