@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+@import './variables.css';
+@import './globals.css';
+
+@import './components/footer.css';
+@import './components/header.css';
+@import './components/button.css';
+@import './components/input.css';
+@import './components/sidebar.css';
+
+@import '../pages/home/index.css';
+@import '../pages/sign-in/index.css';
+@import '../pages/sign-up/index.css';
+@import '../pages/dashboard/index.css';
+@import '../pages/dashboard/home/index.css';
+@import '../pages/dashboard/calendar/index.css';
+
