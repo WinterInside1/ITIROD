@@ -9,4 +9,13 @@
   color: var(--white);
   font-size: 17px;
   border: 0;
+  cursor: pointer;
+}
+
+.button--purple {
+  background: var(--purple);
+}
+
+.button--danger {
+  background: #ca4c4c;
 }

@@ -13,8 +13,11 @@ dashboard.get('/', (req, res) => {
 });
 
 dashboard.get('/calendar', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/pages/dashboard/calendar/index.html'));
-  });
+  res.sendFile(path.join(__dirname, 'src/pages/dashboard/calendar/index.html'));
+});
+dashboard.get('/payment', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/dashboard/payment/index.html'));
+});
 
 app.use('/dashboard', dashboard);
 

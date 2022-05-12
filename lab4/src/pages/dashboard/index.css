@@ -2,6 +2,7 @@
   min-height: 100vh;
   padding: 60px 14px 14px 90px;
   background-color: #f6f6f6;
+  color: #333;
 }
 
 .dashboard__overflow {
@@ -11,11 +12,11 @@
   right: 100%;
   bottom: 0;
   background-color: rgba(143, 143, 143, 0.65);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .dashboard__overflow--open {
-    right: 0%;
+  right: 0%;
 }
 
 .dashboard-header {
