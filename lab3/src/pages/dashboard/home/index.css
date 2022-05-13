@@ -35,3 +35,10 @@
 .dashboard-home__card--5 {
   grid-area: 3 / 3 / 4 / 4;
 }
+
+@media screen and (max-width: 780px) {
+  .dashboard-home__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -27,7 +27,7 @@
 }
 
 .nav-link--selected {
-    border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
 }
 
 .navigation__block .nav-link {
@@ -50,4 +50,21 @@
 
 .logo {
   width: 120px;
+}
+
+@media screen and (max-width: 630px) {
+  .navigation__block:first-child {
+    display: none;
+  }
+
+  .navigation--subheader {
+    flex-direction: column;
+    margin-bottom: 200px;
+  }
+  .navigation--subheader a {
+    margin: 10px 0;
+  }
+  .navigation__block {
+    width: 120px;
+  }
 }

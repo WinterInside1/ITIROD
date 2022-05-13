@@ -7,12 +7,14 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/pages/dashboard/index.css" />
-    <link rel="stylesheet" href="/pages/dashboard/home/index.css" />
+    <link rel="stylesheet" href="/pages/dashboard/payment/index.css" />
   </head>
   <body>
     <div class="dashboard">
       <aside class="sidebar" id="sidebar">
-        <a href="/"><img src="/assets/images/logo.png" class="sidebar__logo" /></a>
+        <a href="/"
+          ><img src="/assets/images/logo.png" class="sidebar__logo"
+        /></a>
 
         <a href="#" class="sidebar-item my-4" id="sidebar-toggle">
           <div class="sidebar-item__text"></div>
@@ -22,7 +24,7 @@
             class="sidebar-item__icon"
           />
         </a>
-        <a href="#" class="sidebar-item sidebar-item--selected" data-section="home">
+        <a href="/dashboard" class="sidebar-item" data-section="home">
           <img
             src="/assets/icons/sidebar/home.svg"
            
@@ -83,7 +85,7 @@
           <div class="sidebar-item__text">ПОМОЩЬ</div>
         </a>
         <div class="flex-grow"></div>
-        <a href="#" href="/" class="sidebar-item">
+        <a href="/" class="sidebar-item">
           <img
             src="/assets/icons/sidebar/exit.svg"
            
@@ -116,34 +118,99 @@
           </div>
         </div>
       </div>
-      <div class="dashboard-home__cards-wrapper">
-        <div class="dashboard-home__card dashboard-home__card--1">
-          <canvas id="chart-1"></canvas>
+
+      <form class="card__container" id="card-form">
+        <div class="card">
+          <div class="row credit">
+            <div class="left">
+              <p>Оплата картой</p>
+            </div>
+          </div>
+          <div class="row cardholder">
+            <div class="info">
+              <label for="cardholdername">Имя</label>
+              <input
+                placeholder="e.g. Richard Bovell"
+                id="cardholdername"
+                required
+                type="text"
+                maxlength="25"
+              />
+            </div>
+          </div>
+          <div class="row number">
+            <div class="info">
+              <label for="cardnumber">Номер</label>
+              <input
+                required
+                id="cardnumber"
+                type="text"
+                pattern="[0-9]{16,19}"
+                maxlength="19"
+                placeholder="8888-8888-8888-8888"
+              />
+            </div>
+          </div>
+          <div class="row details">
+            <div class="left">
+              <label for="expiry-date">Дата</label>
+              <select id="expiry-date">
+                <option>MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <span>/</span>
+              <select id="expiry-date">
+                <option>YYYY</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+            <div class="right">
+              <label for="cvv">CVC/CVV</label>
+              <input type="text" maxlength="4" placeholder="123" required />
+              <span
+                data-balloon-length="medium"
+                data-balloon="The 3 or 4-digit number on the back of your card."
+                data-balloon-pos="up"
+                >i</span
+              >
+            </div>
+          </div>
         </div>
-        <div class="dashboard-home__card dashboard-home__card--2">
-          <canvas id="chart-2"></canvas>
-        </div>
-        <div class="dashboard-home__card dashboard-home__card--3">
-          <canvas id="chart-3"></canvas>
-        </div>
-        <div class="dashboard-home__card dashboard-home__card--4">
-          <canvas id="chart-4"></canvas>
-        </div>
-        <div class="dashboard-home__card dashboard-home__card--5">
-          <canvas id="chart-5"></canvas>
-        </div>
-      </div>
+        <button
+          id="pay-orders"
+          type="submit"
+          class="button button--purple mt-3 mb-4 mr-3"
+        >
+          Оплатить
+        </button>
+      </form>
     </div>
     <div class="dashboard__overflow" id="dashboard-overflow"></div>
     <script src="/pages/dashboard/scripts/sidebar.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
-      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/pages/dashboard/home/scripts/utils.js" module></script>
-    <script src="/pages/dashboard/home/scripts/charts.js" module></script>
     <script src="/pages/dashboard/payment/scripts/index.js"></script>
   </body>
 </html>
