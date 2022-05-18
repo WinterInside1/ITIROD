@@ -1,0 +1,1 @@
+export { DashboardPayment } from './DashboardPayment';

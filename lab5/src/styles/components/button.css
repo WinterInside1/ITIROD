@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 25px;
+  height: 45px;
+  background: var(--lighter-blue);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 17px;
+  border: 0;
+  cursor: pointer;
+}
+
+.button--purple {
+  background: var(--purple);
+}
+
+.button--danger {
+  background: #ca4c4c;
+}
